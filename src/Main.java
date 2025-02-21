@@ -3,12 +3,18 @@
 public class Main {
 
     public static void main(String[] args) {
-        Speak speak = new Speak();
-        speak.hellow();
-        Hello hello = new Hello();
-        System.out.println(hello.sum(1,2));
-        NumberTypeDemo numberTypeDemo = new NumberTypeDemo();
-        numberTypeDemo.a();
+//        Speak speak = new Speak();
+//        speak.hellow();
+//        Hello hello = new Hello();
+//        System.out.println(hello.sum(1,2));
+//        NumberTypeDemo numberTypeDemo = new NumberTypeDemo();
+//        numberTypeDemo.a();
+        int x = 10;
+        int y = 20;
+        int z = (++x)+(y--);
+        System.out.println(z);
+
+
     }
 }
 
