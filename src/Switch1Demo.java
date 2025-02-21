@@ -22,6 +22,6 @@ public class Switch1Demo {
         System.out.println("어이쿠! ");
         kind="...";
     }
-    System.out.printf("%s는 %s이다+n",bio,kind);
+    System.out.printf("%s는 %s이다\n",bio,kind);
   }
 }

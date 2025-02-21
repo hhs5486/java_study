@@ -25,10 +25,10 @@ class Sniffling{
     try {
       Scanner sc = new Scanner(System.in);
       int a = sc.nextInt();
-      if (a>0 && a<=100){
-        return Int();
+      if (a>=0 && a<=100){
+        return a;
       }
-      return a;
+      return Int();
     } catch (InputMismatchException e1) {
       System.out.println("정수가 아닙니다.");
       return Int();
