@@ -2,66 +2,59 @@ package presentation;
 
 public class Main {
   public static void main(String[] args) {
+    DoraemonPocket<새참> pocket = new DoraemonPocket<>();
+    잔치국수 잔치국수 = new 잔치국수();
+    옥수수 옥수수 = new 옥수수();
+    pocket.setInpocket(잔치국수);
+    pocket.setInpocket(옥수수);
+    System.out.println(pocket.getInpocket()[0]);
+
 
   }
 }
 
-class makeHous{
-
+class 세참{
+  새참 새참;
+  잔치국수 잔치국수;
+  옥수수 옥수수;
 }
 
-class constructionMaterials{
-  Cement cement;
-  Rebar rebar;
-  GypsumGoard gypsumGoard;
-  Food food;
-  constructionMaterialsPocket pocket = new constructionMaterialsPocket();
-  void inpocket(){
-    pocket.cement = cement;
+class DoraemonPocket<T> extends infinity{
+  private infinity<T> inpocket = new infinity<>();
+
+
+
+  public T[] getInpocket(){
+    return inpocket.get();
   }
 
-  Doraemon doraemon = new Doraemon();
-
-  void  inDoraemonPocket(){
-    doraemon.pocket.setInpocket(cement);
-    doraemon.pocket.setInpocket(rebar);
-
-  }
-
-}
-class constructionMaterialsPocket{
-  public Cement cement;
-}
-
-class Pocket2{
-  public Object rebar;
-  public Object gypsum_board;
-}
-
-class Doraemon{
-  DoraemonPocket<Object> pocket;
-}
-
-class DoraemonPocket<T>{
-  private  T inpocket;
-  public  T getInpocket(){
-    return inpocket;
-  }
   public void setInpocket(T inpocket){
-    this.inpocket = inpocket;
+    this.inpocket.add(inpocket);
+  }
+
+
+
+}
+class infinity<T>{
+
+  private T[] infinity;
+  private int infinitylength = 0;
+
+  void add(T inpocket) {
+    infinity[infinitylength] = inpocket;
+    infinitylength++;
+  }
+
+  T[] get(){
+    return infinity;
   }
 }
 
-class Cement{
+class 새참{
+}
+class 잔치국수 extends 새참{
+}
+class 옥수수 extends 새참{
 }
 
-class Rebar{
-}
-
-class GypsumGoard{
-}
-
-class Food{
-
-}
 

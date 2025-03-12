@@ -1,19 +1,34 @@
-package exercise;
+package exercise.chapter9;
 
-public class EX2 {
-  public static void main(String[] args) {
-    System.out.println(sum(1,2,3,4));// ==> 9
-    int arr[] = {2,3};
-    System.out.println(sum(1,arr)); //==> 5
-    System.out.println(sum(1,2,3,4,5)); // ==> 14
-  }
+public class Ex2 {
+    public static void main(String[] args) {
+        // Person (이름, 나이)
+        // Person (주민번호, 이름)
+        Person<String, Integer> p1 = new Person<>("홍길동", 20);
+        Person<String, String> p2 = new Person<>("111111", "홍길동");
 
-  // 첫번째 매개변수를 제외한 나머지 가변개수인수로 들어온 값들만 합계를 구하는 문제
-  public static int sum(int i, int...values) {
-    int sum = 0 ;
-    for (int value : values) {
-      sum += value;
+        System.out.println(p1.getKey());
+        System.out.println(p1.getValue());
+
+        System.out.println(p2.getKey());
+        System.out.println(p2.getValue());
     }
-    return sum;
-  }
+}
+
+class Person<A,B> {
+    A key;
+    B value;
+
+    public Person(A key, B value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public A getKey() {
+        return key;
+    }
+
+    public B getValue() {
+        return value;
+    }
 }

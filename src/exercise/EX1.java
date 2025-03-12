@@ -1,21 +1,26 @@
-package exercise;
+package exercise.chapter9;
 
-public class EX1 {
-  public static void main(String[] args) {
-    System.out.println(countChar("hello", 'l')); // ==> 2
-    System.out.println(countChar("hello", 'L')); // ==> 2
-  }
+public class Ex1 {
+    public static void main(String[] args) {
+        Box<Integer> i = new Box<>();
+        i.set(Integer.valueOf(100));
+        System.out.println(i.get());
 
-  public static int countChar(String s, char c){
-    // 이 부분을 구현하세요.
-    int count=0;
-//    c = String.valueOf(c).toLowerCase().charAt(0);
-//    s = s.toLowerCase();
-    for (int i = 0; i < s.length(); i++) {
-      if(s.toUpperCase().charAt(i) == c || s.toLowerCase().charAt(i) == c) {
-        count++;
-      }
+        Box<String> s = new Box<>();
+        s.set("만능이네");
+        System.out.println(s.get());
     }
-    return count;
-  }
+}
+
+class Box<T> {
+    private T data;
+
+    public T get(){
+        return data;
+    }
+
+    public void set(T data) {
+        this.data = data;
+        return ; // 반환값이 없이 return 만 하는 함수
+    }
 }
